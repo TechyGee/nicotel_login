@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body {
+    /* overflow: hidden; */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.slides{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.slider1, .slider2, .slider3, .slider4 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider1::after, .slider2::after, .slider3::after, .slider4::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.content {
+   /* background-color: white; */
+   padding: 10px;
+   width: 80%;
+   height: 50%;
+   border-radius: 5px;
+   position: absolute;
+   top: 50px;
+   left: 50px;
+   color: white;
+   z-index: 1;
+   font-size: 20px;
+   margin: 100px auto;
+
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+h1 .multiText {
+    color: #015BC5;
+}
+
+img {
+    width: 120%;
+    object-fit: cover;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-out 3s linear infinite;
+}
+
+
+@keyframes zoom-out{
+    100%{
+        width: 100%;
+    }
+}
+
+.slider1 {
+    /* animation: slide1 12s linear infinite; */
+}
+.slider2 {
+    animation: slide2 12s linear infinite;
+}
+.slider3 {
+    animation: slide3 12s linear infinite;
+}
+.slider4 {
+    animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes slide2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes slide3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes slide4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+.content .topline {
+    font-size: 40px;
+    letter-spacing: 5px;
+    position: relative;
+    display: block ;
+}
+
+.content .topline::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 10px;
+    background-color: #015BC5;
+    bottom: 10px;
+}
+.right-col {
+    background-color: #015BC5;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.login-form{
+    background-color: white;
+    height: 60%;
+    width: 50%;
+    min-width: 60%;
+    padding: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.login-form label{
+    font-size: 18px;
+    color: rgb(69, 67, 67);
+    margin-top: 20px;
+}
+
+.login-form input{
+    width: 100%;
+    padding: 15px;
+    margin: 15px auto;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(252, 243, 243);
+    outline: none;
+    text-align: center;
+    border: 1px solid #f2f2f2;
+}
+.hd {
+    text-align: center;
+    margin: 10px auto 40px auto;
+    font-size: 24px;
+    color: #015BC5;
+}
+.bx {
+    position: absolute;
+    top: 32px;
+    left: 20px;
+    font-size: 20px;
+    color: #015BC5;
+}
+.username, .password {
+    position: relative;
+}
+
+.login-form input:focus {
+    border: 1px solid #015BC5;
+    box-shadow: 1px 1px 5px #015BC5;
+}
+#btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: none;
+    border: 2px solid #015BC5;
+    color: #015BC5;
+    font-size: 18px;
+}
+
+#btn:hover {
+    background-color: #015BC5;
+    color: white;
+}
+
+@media screen and (max-width: 950px) {
+    .slides{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+       
+    }
+
+    .content {
+        text-align: center;
+        margin-top: -10px;     
+     }
+     .content h1{
+        font-size: 35px;
+     }
+     .right-col{
+        width: 100%;
+        max-width: 100%;
+     }
+     .login-form {
+        width: 40%;
+        margin-top: 170px;
+        opacity: 0.8;
+        max-width: 40px;
+     }
+  
+}
+
+@media screen and (max-width: 768px) {
+   
+     .content h1{
+        font-size: 35px;
+     }
+     .topline{
+        font-size: 23px;
+     }
+     .right-col{
+        width: 100%;
+        max-width: 100%;
+     }
+     .login-form {
+        width: 50%;
+        height: 55%;
+        z-index: 1;
+     }
+  
+}
+
+
+@media screen and (max-width: 600px) {
+   
+    .content h1{
+       font-size: 35px;
+       margin-bottom: 20px;
+    }
+
+    .login-form {
+       width: 50%;
+       height: 55%;
+       z-index: 1;
+    }
+ 
+}

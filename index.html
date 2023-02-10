@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicotel Apartment Login</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <h1>Hello world</h1>
+    <div class="container">
+        <div class="slides">
+            <div class="slider1">
+                <img src="images/nicotel9.jpg" alt="" height="120%">
+                <div class="content">
+                    <span class="topline">Hello</span>
+                    <h1>Welcome to <span class="multiText">Nicotel Apartments</span> </h1>
+                </div>
+            </div>
+            <div class="slider2">
+                <img src="images/nicotel1.jpg" alt="">
+            </div>
+            <div class="slider3">
+                <img src="images/nicotel2.jpg" alt="">
+            </div>
+            <div class="slider4">
+                <img src="images/nicotel3.jpg" alt="">
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="login-form">
+                <form action="">
+                    <div class="hd">
+                        <p>Login to Nicotel Hotspot</p>
+                    </div>
+                    <div class="username">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                        <!-- <i class='bx bx-user'></i> -->
+                    </div> 
+                    <div class="password"> 
+                        <label for="password">password:</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <!-- <i class='bx bx-lock-alt'></i> -->
+                    </div>
+                    <button id="btn" type="submit" onclick="validate()">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <section class="container">
+        <div class="left-col">
+            <div class="login-form">
+                <form action="">
+                    <div class="hd">
+                        <p>Login to Nicotel Hotspot</p>
+                    </div>
+                    <div class="username">
+                        <input type="text" id="username" placeholder="Enter your username">
+                        <i class='bx bx-user'></i>
+                    </div> 
+                    <div class="password"> 
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <i class='bx bx-lock-alt'></i>
+                    </div>
+                    <button id="btn" type="submit" onclick="validate()">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-col">    
+            <img src="images/nicotel9.jpg" alt="">
+        </div>
+
+    </section> -->
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
 </html>
